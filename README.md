@@ -1,11 +1,19 @@
-# Start your own "Can of Books" App
+# Project Name
 
-This repository has starter code to begin work on creating your own online bookshelf.
+**Author**: Benjamin Ibarra & Shan Jiang
+**Version**: 1.0.0
 
-## What can books do?
+## Overview
+With this app we're are implementing the use of Auth0 to practice adding log in features to our sites
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+## Getting Started
+This is a simple app that allows you to log in and verifies that you have done so by pulling data from auth0 confirming your authentication
 
-## Use this template
+## Architecture
+react Js, Auth0
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+## Change Log
+use'ed template repo to create log in page with Auth0 implemented
+
+## Credit and Collaborations
+Big thanks to Shan Jiang my coding partner through this lab
