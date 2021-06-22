@@ -24,7 +24,7 @@ class App extends React.Component {
     const config = {
       headers: {"Authorization": `Bearer ${jwt}` }
     };
-    const serverResponse = await axios.get('http://localhost:3001/test-login', config);
+    const serverResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/test-login`, config);
   
     console.log(serverResponse);
   }
