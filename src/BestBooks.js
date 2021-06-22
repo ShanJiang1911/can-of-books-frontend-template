@@ -32,6 +32,11 @@ class MyFavoriteBooks extends React.Component {
           {
             this.state.bookData.map( data =>
               <Carousel.Item>
+                    <img
+      className="d-block w-100"
+      src={`https://via.placeholder.com/800x400/000000/FFFFFF/?text=${data.name}`}
+      alt="First slide"
+    />
               <Carousel.Caption>
                 <h3>{data.name}</h3>
               </Carousel.Caption>
