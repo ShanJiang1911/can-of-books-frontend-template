@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Header.css","webpack://src/BestBooks.css"],"names":[],"mappings":"AAAA,EACE,UACF,CAEA,QACE,aACF,CCNA,WACE,eACF","file":"main.945c68f2.chunk.css","sourcesContent":["a{\n  color:#fff;\n}\n\na:hover{\n  color:darkgrey;\n}",".jumbotron{\n  margin-bottom: 0;\n}"]}
