@@ -11,12 +11,12 @@ class BookFormModal extends React.Component {
 
   render() {
     return (
-      <Modal show={this.props.isToggleOn} hide={this.props.isToggleOn} onSubmit={this.props.onSubmit}>
+      <Modal show={this.props.isToggleOn} hide={this.props.isToggleOn}>
         <Modal.Header>
-          <Button variant='outline-dark' type='submit' onClick={this.props.handleAddBookClick}>Back to Books</Button>
+          <Button variant='outline-dark' onClick={this.props.handleAddBookClick}>Back to Books</Button>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={this.props.onSubmit}>
             <Form.Group>
               <Form.Control type='input' placeholder='Book Title' id='name'></Form.Control>
               <Form.Text ClassName='text-muted'>Enter the title of your book</Form.Text>
@@ -25,11 +25,9 @@ class BookFormModal extends React.Component {
               <Form.Control type='input' placeholder='Description' id='description'></Form.Control>
               <Form.Text ClassName='text-muted'>Enter a description of your book</Form.Text>
             </Form.Group>
+            <Button variant='outline-dark' type='submit'>Add your book</Button>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant='outline-dark' type='submit'>Add your book</Button>
-        </Modal.Footer>
       </Modal>
     );
   }
