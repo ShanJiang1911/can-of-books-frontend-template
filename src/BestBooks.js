@@ -22,6 +22,17 @@ class MyFavoriteBooks extends React.Component {
     }));
   }
 
+  getConfig = async() => {
+    const { getIdTokenClaims } = this.props.auth0;
+    let tokenClaims = await getIdTokenClaims();
+    const jwt = tokenClaims.__raw;
+
+    const config = {
+      headers: {"Authorization" : `Bearer ${jwt}`}
+    };
+    return config;
+  }
+
   onSubmit = async (e) => {
     e.preventDefault();
     let data = {
@@ -31,13 +42,11 @@ class MyFavoriteBooks extends React.Component {
     console.log(data);
 
     let config = await this.getConfig();
-    // send data to backend
-    // the second argument to .post is the data that will be the request body
-    // the third argument is config, including the header
+
     const responseData = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/books`, data, config);
     console.log(responseData);
     let updatedArray = this.state.bookData;
-    // add the new cat we created into the array
+
     updatedArray.push(responseData.data);
     this.setState({ bookData: updatedArray });
   }
@@ -55,6 +64,14 @@ class MyFavoriteBooks extends React.Component {
     this.setState({ bookData: bookData.data });
   }
   
+  deleteBook = async (id) => {
+    let config = await this.getConfig();
+    let response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/books/${id}`, config);
+    console.log(response);
+    let updatedArray = this.state.bookData.filter(book => book._id !== id);
+    this.setState({bookData: updatedArray});
+  }
+
   render() {
     const { user } = this.props.auth0;
     return (
@@ -73,7 +90,9 @@ class MyFavoriteBooks extends React.Component {
                       alt="First slide"
                     />
                     <Carousel.Caption>
-                      <h3>{data.name}</h3>
+                      <h3>{data.description}</h3>
+                      <h6>{data.status}</h6>
+                    <Button variant='outline-light' onClick={() => this.deleteBook(data._id)}>Remove</Button>
                     </Carousel.Caption>
                   </Carousel.Item>)
               }
