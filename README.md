@@ -1,5 +1,9 @@
 # Project Name
 
+#### Note to Alistiar:
+Please create a .env file within the src folder with the envoirment key of: REACT_APP_BACKEND_URL=http://localhost:3001
+This should help fix any errors causing the full functionality of the lab not to work. Also Shan Jiang and I will be resubmitting our previous labs. Thank you!
+
 **Author**: Benjamin Ibarra & Shan Jiang
 
 **Version**: 1.0.0 
