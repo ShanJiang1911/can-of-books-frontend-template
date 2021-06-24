@@ -4,15 +4,15 @@
 
 **Version**: 1.0.0 
 
-Name of feature: mongo functionality
+Name of feature: Update Functionality
 
-Estimate of time needed to complete: 6 hours
+Estimate of time needed to complete: 5 hours
 
 Start time: 1:30
 
-Finish time: 5:00
+Finish time: 4
 
-Actual time needed to complete: 3.5 hours
+Actual time needed to complete: 2.5 hours
 
 ## Overview
 With this app we're are implementing the use of Auth0 to practice adding log in features to our sites
@@ -26,7 +26,8 @@ react Js, Auth0
 ## Change Log
 use'ed template repo to create log in page with Auth0 implemented
 Implemented backend functionality
-Implements POST and DELETE fucntionality
+Implemented POST and DELETE fucntionality
+Implemented PUT functionality
 
 ## Credit and Collaborations
 Great appreciation to Shan Jiang for his contribution to this lab
