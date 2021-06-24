@@ -12,9 +12,6 @@ class BookFormModal extends React.Component {
   render() {
     return (
       <Modal show={this.props.isToggleOn} hide={this.props.isToggleOn}>
-        <Modal.Header>
-          <Button variant='outline-dark' onClick={this.props.handleAddBookClick}>Back to Books</Button>
-        </Modal.Header>
         <Modal.Body>
           <Form onSubmit={this.props.onSubmit}>
             <Form.Group>
@@ -28,6 +25,9 @@ class BookFormModal extends React.Component {
             <Button variant='outline-dark' type='submit'>Add your book</Button>
           </Form>
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant='outline-dark' onClick={this.props.handleAddBookClick}>Back to Books</Button>
+        </Modal.Footer>
       </Modal>
     );
   }
