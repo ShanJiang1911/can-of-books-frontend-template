@@ -4,15 +4,15 @@
 
 **Version**: 1.0.0 
 
-Name of feature: front end
+Name of feature: mongo functionality
 
-Estimate of time needed to complete: 5-6 hours
+Estimate of time needed to complete: 6 hours
 
 Start time: 1:30
 
-Finish time: 6:00
+Finish time: 5:00
 
-Actual time needed to complete: 5-6 hours
+Actual time needed to complete: 3.5 hours
 
 ## Overview
 With this app we're are implementing the use of Auth0 to practice adding log in features to our sites
@@ -24,10 +24,13 @@ This is a simple app that allows you to log in and verifies that you have done s
 react Js, Auth0
 
 ## Change Log
-use'ed template repo to create log in page with Auth0 implemente
+use'ed template repo to create log in page with Auth0 implemented
+Implemented backend functionality
+Implements POST and DELETE fucntionality
 
 ## Credit and Collaborations
-Great appreciation to Benjamin Ibarra for his contribution to this lab
+Great appreciation to Shan Jiang for his contribution to this lab
+Big thanks to Patrick Lourion for clutch help with the remove button the carousel
 
 
 ## Logistical
@@ -40,6 +43,7 @@ Great appreciation to Benjamin Ibarra for his contribution to this lab
   * Every 1-1.5 hour
 * What is your plan if you start to fall behind?
   * We will help eachother to keep the same pace
+  
 ## Cooperative
 
 * Make a list of each parson’s strengths.
