@@ -16,11 +16,11 @@ class BookFormModal extends React.Component {
           <Form onSubmit={this.props.onSubmit}>
             <Form.Group>
               <Form.Control type='input' placeholder='Book Title' id='name'></Form.Control>
-              <Form.Text ClassName='text-muted'>Enter the title of your book</Form.Text>
+              <Form.Text className='text-muted'>Enter the title of your book</Form.Text>
             </Form.Group>
             <Form.Group>
               <Form.Control type='input' placeholder='Description' id='description'></Form.Control>
-              <Form.Text ClassName='text-muted'>Enter a description of your book</Form.Text>
+              <Form.Text className='text-muted'>Enter a description of your book</Form.Text>
             </Form.Group>
             <Button variant='outline-dark' type='submit'>Add your book</Button>
           </Form>
