@@ -24,8 +24,15 @@ class MyFavoriteBooks extends React.Component {
   // handle click function for add a new book button
   handleAddBookClick = () => {
     this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
+      isToggleOn: !prevState.isToggleOn,
     }));
+  }
+
+  handleUpdateCancel = () => {
+    this.setState({
+      showUpdate: false,
+      bookToUpdate: {}
+    });
   }
 
   // basic get config function to aquire authorization token from logged in user
@@ -64,7 +71,10 @@ class MyFavoriteBooks extends React.Component {
     updatedArray.push(responseData.data);
 
     // setting the new state of bookData to be UpdatedArray data
-    this.setState({ bookData: updatedArray });
+    this.setState({
+      bookData: updatedArray,
+      showUpdate: false
+    });
   }
 
   // Makes GET request from server at inital component rendering
@@ -115,7 +125,7 @@ class MyFavoriteBooks extends React.Component {
   // sendBookUpdate gatheres the data of the selcted book, sends a PUT to server with dataToUpdate book
   sendBookUpdate = async (e) => {
     e.preventDefault();
-    let config = await this.getconfig();
+    let config = await this.getConfig();
 
     // when Update Book is clicked, it will target the current book on the carousel
     let dataToUpdate = {
@@ -124,7 +134,7 @@ class MyFavoriteBooks extends React.Component {
     };
 
     // sets response to be the data recieved back from put server
-    let response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/books/${this.state.bookToUpdate}`, dataToUpdate, config);
+    let response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/books/${this.state.bookToUpdate._id}`, dataToUpdate, config);
 
     // Assigns update Array to be bookData
     let updatedArray = this.state.bookData;
@@ -151,7 +161,7 @@ class MyFavoriteBooks extends React.Component {
             <Carousel fade>
               {
                 this.state.bookData.map(data =>
-                  <Carousel.Item>
+                  <Carousel.Item interval={12000} id={data._id}>
                     <img
                       className="d-block w-100"
                       src={`https://via.placeholder.com/800x400/000000/FFFFFF/?text=${data.name}`}
@@ -181,6 +191,7 @@ class MyFavoriteBooks extends React.Component {
           book={this.state.bookToUpdate}
           showUpdate={this.state.showUpdate}
           sendBookUpdate={this.sendBookUpdate}
+          handleUpdateCancel={this.handleUpdateCancel}
           ></UpdateForm> : ''
         }
       </Jumbotron>
