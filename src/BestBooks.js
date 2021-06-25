@@ -71,10 +71,11 @@ class MyFavoriteBooks extends React.Component {
     updatedArray.push(responseData.data);
 
     // setting the new state of bookData to be UpdatedArray data
-    this.setState({
+    this.setState(prevState => ({
       bookData: updatedArray,
-      showUpdate: false
-    });
+      showUpdate: false,
+      isToggleOn: !prevState.isToggleOn
+    }));
   }
 
   // Makes GET request from server at inital component rendering
