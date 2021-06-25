@@ -1,8 +1,16 @@
 # Project Name
 
-#### Note to Alistiar:
-Please create a .env file within the src folder with the envoirment key of: REACT_APP_BACKEND_URL=http://localhost:3001
-This should help fix any errors causing the full functionality of the lab not to work. Also Shan Jiang and I will be resubmitting our previous labs. Thank you!
+## Note to Alistiar:
+- For frontend please create a .env file within the src folder with the envoirment key of: REACT_APP_BACKEND_URL=http://localhost:3001
+
+- For backend please create a .env as well with PORT=3001
+
+  - This should help fix any errors causing the full functionality of the lab not to work. Also Shan Jiang and I will be resubmitting our previous labs. Thank you!
+
+- Shan and I were also able to successfully deploy to netlify, heroku, and mondoDB atlas
+  - Please check out our full functional deployed site here [https://bento-shan-book-keeper.netlify.app/](https://bento-shan-book-keeper.netlify.app/)
+  - Be aware that you might need to refresh the page after adding your first book inorder for the carousel to update and display. This should only occur once, and then books will remain on the site as long as you keep them.
+
 
 **Author**: Benjamin Ibarra & Shan Jiang
 
@@ -14,9 +22,9 @@ Estimate of time needed to complete: 5 hours
 
 Start time: 1:30
 
-Finish time: 4
+Finish time: 6
 
-Actual time needed to complete: 2.5 hours
+Actual time needed to complete: 4.5 hours
 
 ## Overview
 With this app we're are implementing the use of Auth0 to practice adding log in features to our sites
